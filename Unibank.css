@@ -1,10 +1,225 @@
+/** @format */
 
 :root {
-
-    --green-color: green;
+	--primary-color: blue;
+	--secondary-color: #ccc;
+	--third-color: #fff;
+    --text-color: #222;
+    --fourth-color: #ecf0f1;
 }
 
-h1 {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+html,
+body {
+    width: 100%;
+}
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    height: 300vh;
+}
+.buttons {
+	width: 100%;
+	height: 52px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buttons button {
+	margin-left: 40px;
+	border: none;
+	outline: none;
+	background: none;
+	width: 350px;
+	color: var(--text-color);
+	padding-bottom: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	letter-spacing: 1.5px;
+}
+.tables {
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	color: var(--text-color);
+}
+.tables table {
+	border: 1px solid var(--secondary-color);
+	border-collapse: collapse;
+	width: 90%;
+	padding: 10px;
+	position: relative;
+}
+table:first-child {
+	width: 100%;
+	height: 450px;
+	margin: auto;
+}
+table:last-child {
+	width: 90%;
+    height: 350px;
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    
+}
+table tr {
+	text-align: center;
+}
+table tr:nth-child(even) {
+	background-color: var(--primary-color);
+}
+.calculator {
 
-    color: var(--green-color);
+    display: flex;
+    flex-direction: column;
+    width: 90%; 
+    margin: 0 auto;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+.calculator h2 {
+
+    color: var(--text-color);
+    padding-bottom: 30px;
+    width: 120px;
+}
+.inputs {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.outputs {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+.outputs div {
+
+    width: 300px;
+    height: 130px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+}
+.outputs div .header {
+
+    padding-bottom: 15px;
+}
+.inputs div {
+    padding: 10px;
+}
+.inputs div label{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+    width: 190px;
+}
+.inputs div hr {
+
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--fourth-color);
+    border: none;
+}
+.inputs div label .range {
+
+    width: 190px;
+}
+.inputs .deposit-amount .number {
+
+    width: 110px;
+    padding:15px;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+.deposit-amount .range {
+
+margin-top: 5px;
+}
+.currency select {
+
+     width: 190px;
+    padding:15px;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+.deposit-period p{
+     width: 110px;
+    padding:15px;
+    border: none;
+    background: none;
+}
+.interest-compounding select {
+     width: 190px;
+    padding:15px;
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 1015px) {
+
+ .calculator .inputs {
+     flex-direction: column;
+ }
+ .inputs div  {
+     width: 100%;
+ }
+ .calculator .inputs div label {
+
+    width: 100%;
+ }
+ .inputs div label .range {
+     width: 100%;
+ }
+ .inputs div label select {
+
+    width: 100%;
+ }
+ .outputs {
+     flex-direction: column;
+ }
+  .outputs div {
+
+    width: 100%;
+    margin-top: 10px;
+  }
+  .buttons {
+      flex-direction: column;
+      position: relative;
+  }
+  .buttons button {
+      font-size: 13px;
+      margin: 0px;
+      border: none;
+  }
+  .buttons #btnOne {
+     
+     display: none; 
+  }
+  .buttons #btnTwo {
+
+    width: 100%;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  
 }
