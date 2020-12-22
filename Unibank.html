@@ -11,16 +11,21 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+		/>
 	</head>
 	<body>
 		<div class="container">
 			<div class="buttons">
-				<button id="btnOne" onclick="changeOne()">Withdrawal at the end of period</button>
+				<button id="btnOne" onclick="changeOne()">
+					Withdrawal at the end of period
+				</button>
 				<button id="btnTwo" onclick="changeTwo()">Monthly withdrawal</button>
 			</div>
 			<div class="tables">
-                <table id="tableOne">
+				<table id="tableOne">
 					<tr>
 						<th></th>
 						<th>AZN</th>
@@ -28,38 +33,38 @@
 						<th>EUR</th>
 					</tr>
 					<tr>
-						<td>3 ay</td>
-						<td>6 %</td>
+						<td id="monthForYearly">3 ay</td>
+						<td id="percentForYearly">6 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 					<tr>
-						<td>6 ay</td>
-						<td>8 %</td>
+						<td id="monthForYearly">6 ay</td>
+						<td id="percentForYearly">8 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 					<tr>
-						<td>12 ay</td>
-						<td>12 %</td>
+						<td id="monthForYearly">12 ay</td>
+						<td id="percentForYearly">12 %</td>
 						<td>2 %</td>
 						<td>0.1 %</td>
 					</tr>
 					<tr>
-						<td>18 ay</td>
-						<td>12 %</td>
+						<td id="monthForYearly">18 ay</td>
+						<td id="percentForYearly">12 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 					<tr>
-						<td>24 ay</td>
-						<td>12 %</td>
+						<td id="monthForYearly">24 ay</td>
+						<td id="percentForYearly">12 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 					<tr>
-						<td>36 ay</td>
-						<td>12 %</td>
+						<td id="monthForYearly">36 ay</td>
+						<td id="percentForYearly">12 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
@@ -72,92 +77,114 @@
 						<th>EUR</th>
 					</tr>
 					<tr>
-						<td>12 ay</td>
-						<td>11 %</td>
-						<td>1.6 %</td>
-						<td>0.1 %</td>
+						<td id="month">12 ay</td>
+						<td id="percent">11 %</td>
+						<td id="monthUSD">1.6 %</td>
+						<td id="monthEUR">-</td>
 					</tr>
 					<tr>
-						<td>18 ay</td>
-						<td>11 %</td>
-						<td>-</td>
-						<td>-</td>
-					</tr>
-					<tr>
-						<td>24 ay</td>
+						<td id="month">18 ay</td>
 						<td>11 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 					<tr>
-						<td>36 ay</td>
+						<td id="month">24 ay</td>
+						<td>11 %</td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td id="month">36 ay</td>
 						<td>11 %</td>
 						<td>-</td>
 						<td>-</td>
 					</tr>
 				</table>
-            </div>
-		    <div class="calculator">
-                <h2>Calculator</h2>
-                <div class="inputs">
-                    <div class="deposit-amount">
-                        <label for="">
-                            <h3 class="header">Deposit amount</h3>
-                        <input type="number" class="number" value="500" id="inputAmount">
-                        <input type="range" class="range" min="500" max="500000" value="500" id="rangeAmount">
-                        </label>
-                    </div>
-                    <div class="currency">
-                        <label for="">
-                            <h3 class="header">Currency</h3>
-                        <select id="selectCurrency">
-                            <option value="1">azn</option>
-                            <option value="2">usd</option>
-                            <option value="3">eur</option>
-                        </select>
-                        <hr>
-                        </label>
-                    </div>
-                    <div class="deposit-period">
-                        <label for="">
-                            <h3 class="header">Deposit period</h3>
-                        <p><span id="inputMonth">3 </span><span>month</span></p>
-                        <input type="range" class="range" min="1" max="5" value="1">
-                        </label>
-                    </div>
-                    <div class="interest-compounding">
-                        <label for="">
-                            <h3 class="header">Interest Compounding</h3>
-                            <select id="yearOrMonthly">
-                                <option value="1">At the end</option>
-                                <option value="2">Monthly</option>
-                            </select>
-                            <hr>
-                        </label>
-                    </div>
-                </div>
-                <div class="outputs">
-                   <div class="totalAmount">
-                       <label for="">
-                           <h3 class="header">Total amount</h3>
-                           <p><span id="totalAmount"></span><span id="changeCurrency">azn</span></p>
-                       </label>
-                   </div>
-                   <div class="monthlyProfit">
-                       <label for="">
-                           <h3 class="header">Monthly profit</h3>
-                           <p><span id="monthlyProfit"></span><span id="changeCurrency">azn</span></p>
-                       </label>
-                   </div>
-                   <div class="annual-interest">
-                       <label for="">
-                           <h3 class="header">Annual interest</h3>
-                           <p><span id="outputPercent">12</span>%</p>
-                       </label>
-                   </div>
-                </div>
-                </div>
-            </div>
+			</div>
+			<div class="calculator">
+				<h2>Calculator</h2>
+				<div class="inputs">
+					<div class="deposit-amount">
+						<label for="">
+							<h3 class="header">Deposit amount</h3>
+							<p id="inputAmount" class="number" on>500</p>
+							<input
+								type="range"
+								class="range"
+								value="500"
+								id="rangeAmount"
+								min="500"
+								max="500000"
+							/>
+						</label>
+					</div>
+					<div class="currency">
+						<label for="">
+							<h3 class="header">Currency</h3>
+							<select id="selectCurrency">
+								<option value="1">azn</option>
+								<option value="2">usd</option>
+								<option value="3">eur</option>
+							</select>
+							<hr />
+						</label>
+					</div>
+					<div class="deposit-period">
+						<label for="">
+							<h3 class="header">Deposit period</h3>
+							<p class="depositperiod">
+								<span id="inputMonth">3</span><span class="month">month</span>
+							</p>
+							<input
+								type="range"
+								class="range"
+								min="1"
+								max="6"
+								value="1"
+								id="rangeMonth"
+							/>
+						</label>
+					</div>
+					<div class="interest-compounding">
+						<label for="">
+							<h3 class="header">Interest Compounding</h3>
+							<select id="yearOrMonthly">
+								<option value="1">At the end</option>
+								<option value="2">Monthly</option>
+							</select>
+							<hr />
+						</label>
+					</div>
+				</div>
+				<div class="outputs" id="outputs">
+					<div class="totalAmount">
+						<label for="">
+							<h3 class="header" style="text-align: center">Total amount</h3>
+							<p style="width: 200px; text-align: center">
+								<span id="totalAmount"></span
+								><span id="changeCurrency">azn</span>
+							</p>
+						</label>
+					</div>
+					<div class="monthlyProfit">
+						<label for="">
+							<h3 class="header" style="text-align: center">Monthly profit</h3>
+							<p>
+								<span id="monthlyProfit"></span
+								><span id="changeCurrencyMonth">azn</span>
+							</p>
+						</label>
+					</div>
+					<div class="annual-interest">
+						<label for="">
+							<h3 class="header" style="text-align: center">Annual interest</h3>
+							<p><span id="outputPercent">6</span>%</p>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script src="./Unibank.js"></script>
 	</body>
 </html>
