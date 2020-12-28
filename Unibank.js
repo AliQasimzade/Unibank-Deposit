@@ -1,5 +1,4 @@
 /** @format */
-
 function changeOne() {
 	document.getElementById('tableTwo').style.opacity = '0';
 	document.getElementById('btnTwo').style.border = 'none';
@@ -11,17 +10,6 @@ function changeTwo() {
 	document.getElementById('tableTwo').style.opacity = '1';
 	document.getElementById('btnOne').style.border = 'none';
 }
-
-function deposit() {
-	const inputAmount = Number(document.getElementById('inputAmount').innerHTML);
-	const percent = Number(document.getElementById('outputPercent').innerHTML);
-	const month = Number(document.getElementById('inputMonth').innerHTML);
-	const totalAmount = inputAmount + (inputAmount * percent) / 100 / 4;
-	const monthlyProfit = ((inputAmount * percent) / 100 / 4 / month).toFixed(2);
-	document.getElementById('totalAmount').innerHTML = totalAmount;
-	document.getElementById('monthlyProfit').innerHTML = monthlyProfit;
-}
-deposit();
 
 document.getElementById('rangeAmount').addEventListener('input', () => {
 	let inputAmount = Number(document.getElementById('rangeAmount').value);
