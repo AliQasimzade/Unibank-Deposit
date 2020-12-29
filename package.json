@@ -1,0 +1,23 @@
+{
+  "name": "unibank-deposit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Unibank.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Unibank.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliQasimzade/Unibank-Deposit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliQasimzade/Unibank-Deposit/issues"
+  },
+  "homepage": "https://github.com/AliQasimzade/Unibank-Deposit#readme",
+  "dependencies": {
+    "ramda": "^0.27.1"
+  }
+}

@@ -28,9 +28,7 @@ function calculateDeposit() {
     document.getElementById("inputMonth").innerHTML = month;
     document.getElementById("outputPercent").innerHTML = percent;
     const totalAmount = inputAmount + (inputAmount * percent) / 100 / 4;
-    const monthlyProfit = ((inputAmount * percent) / 100 / 4 / month).toFixed(
-      2
-    );
+    const monthlyProfit = ((inputAmount * percent) / 100 / 4 / month).toFixed(2);
     document.getElementById("totalAmount").innerHTML = totalAmount;
     document.getElementById("monthlyProfit").innerHTML = monthlyProfit;
   } else if (selectCurrency == 1 && rangeMonth == 2 && yearOrMonthly == 1) {
@@ -39,9 +37,7 @@ function calculateDeposit() {
     document.getElementById("inputMonth").innerHTML = month;
     document.getElementById("outputPercent").innerHTML = percent;
     const totalAmount = inputAmount + (inputAmount * percent) / 100 / 2;
-    const monthlyProfit = ((inputAmount * percent) / 100 / 2 / month).toFixed(
-      2
-    );
+    const monthlyProfit = ((inputAmount * percent) / 100 / 2 / month).toFixed(2);
     document.getElementById("totalAmount").innerHTML = totalAmount;
     document.getElementById("monthlyProfit").innerHTML = monthlyProfit;
   } else if (selectCurrency == 1 && rangeMonth == 3 && yearOrMonthly == 1) {
